@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/admin.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <title>Admin</title>
+</head>
+
+<body>
+
+  <div class="top_nav">
+    <!-- top navbar -->
+    <nav class="container   navbar navbar-light  my-0 py-0 ">
+      <a class="border-warning rounded-pill  navbar-brand" href="#">
+        <img src="data/logo.svg" width="" height="35" alt="Shop" sizes="" srcset="">
+      </a>
+
+
+      <form class="form-inline my-2 my-lg-0 ml-auto ">
+
+        <!-- <a class="d-md-none" data-toggle="modal" data-target="#login" href="#">
+          <span style="font-size: 30px; color:  #edcfa9;">
+            <i class="far fa-user"></i>
+          </span>
+        </a> -->
+                <div class="nav-item dropdown d-md-none">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span style="font-size: 30px; color: #edcfa9;">
+            <i class="far fa-user"></i>
+          </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#"><i class="far fa-user"></i> Profile</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> View Panding order</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </div>
+        <!-- <a href="card.html">
+        <span class="nav-item mx-2 d-md-none">
+          <span class="cart_count float-right ">2</span>
+          <span style="font-size: 30px; color:  #edcfa9;">
+            <i class="fas fa-cart-arrow-down"></i>
+          </span>
+        </span>
+        </a> -->
+      </form>
+      <button class="navbar-toggler  d-md-none " type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- <form class="form-inline my-2 my-lg-0  mr-2"></form> -->
+      <!-- <div class=" row mx-md-2">
+        <div class="mt-1 pr-0">
+          <input class=" form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class="col-2 ml-0 pl-0">
+          <button class=" btn  my-sm-0" type=""><i style="font-size: 30px; color: #edcfa9;"
+              class=" fas fa-search"></i></button>
+        </div>
+
+      </div> -->
+
+
+      <!-- <a class="d-none d-md-block signIn" data-toggle="modal" data-target="#login" href="#">
+        <span style="font-size: 30px; color: #edcfa9;">
+          <i class="far fa-user"></i>
+        </span>
+        Sign In/Join</a> -->
+        <div class="nav-item dropdown d-none d-md-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span style="font-size: 30px; color: #edcfa9;">
+            <i class="far fa-user"></i>
+          </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#"><i class="far fa-user"></i> Profile</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i> View Panding order</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+      </div>
+        <!-- <a href="card.html">
+          <span class="nav-item mx-2 d-none d-md-block">
+            <span class="cart_count float-right ">0</span>
+            <span style="font-size: 30px; color: #edcfa9;">
+              <i class="fas fa-cart-arrow-down"></i>
+            </span>
+          </span>
+        </a> -->
+      </form>
+      <button class="navbar-toggler d-none d-md-block d-lg-none" type="button" data-toggle="collapse"
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+  <div class="buttom_nav">
+    <nav class=" container  navbar navbar-expand-lg navbar-light ">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+      <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <ul class="nav nav-tabs mx-auto nav-item-font">
+          <li class="nav-item ">
+            <a class="nav-link active" data-toggle="tab" href="#dashboard">Dashboard </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#uplode_product">Uplode Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#product">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Product_catagory">Product catagory</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Order_Detaile">Order_Detaile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class=" tab-content container mt-5">
+
+    
+
+      <!-- <div class="col-4 col-md-12">
+
+        <div class="nav-side-menu">
+          <div class="brand">Press Curing Control</div>
+          <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+          <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+              <li>
+                <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-shopping-cart fa-lg"></i> Add Product
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-wrench fa-lg"></i>Update product
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-product-hunt fa-lg"></i> delete Product
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="far fa-money-bill-alt fa-lg"></i> payment Detail
+                </a>
+              </li>
+
+              <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                <a href="#"><i class="fa fa-gift fa-lg"></i> Anlagenauswahl <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="products">
+                <li class="active"><a href="#">RFT-H1</a></li>
+                <li><a href="#">RFT-H2</a></li>
+                <li><a href="#">BTB-H1</a></li>
+                <li><a href="#">BTB-H2</a></li>
+              </ul>
+
+
+              <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a href="#"><i class="fa fa-globe fa-lg"></i> Auswertungen <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="service">
+                <li>Trendmonitoring</li>
+                <li>Alarmmonitoring</li>
+                <li>Audit-Trail</li>
+              </ul>
+
+
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a href="#"><i class="fa fa-car fa-lg"></i> Reporting <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="new">
+                <li>Alarmstatistik</li>
+                <li>Prozessfähigkeit</li>
+              </ul>
+
+
+              <li>
+                <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Profile
+                </a>
+              </li>
+
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a href="#"><i class="fa fa-car fa-lg"></i> Service <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="new">
+                <li>Sensorkonfiguration</li>
+                <li>Betriebsarten</li>
+              </ul>
+
+            </ul>
+          </div>
+
+        </div>
+      </div> -->
+
+
+
+      <div id="dashboard" class="tab-pane fade in active show">
+        <!-- Dashboard d-none-->
+        <div class="">
+          <div class="row">
+
+
+            <div class="col-12 col-md-4 mb-3  box_style box_colour1">
+
+              <h3>Pending Orders <br><br> 0 </h3>
+              <ul class="list-group box_colour1">
+                <li class="list-group-item box_colour1">
+                  <div style="float: left;">today</div>
+                  <div style="float: right;"> O</div>
+                </li>
+                <li class="list-group-item box_colour1" style="background-color: rgb(136, 198, 248);">
+                  <div style="float: left;">Yesterday</div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour1" style="background-color: rgb(136, 198, 248);">
+                  <div style="float: left;">older</div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour1" style="background-color: rgb(136, 198, 248);">
+                  <div style="float: left;">Current daily Ordert limitation</div>
+                  <div style="float: right;">O</div>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="col-6 col-md-4 mb-3  box_style box_colour2">
+              <h3>Best Seling product sales<br><br> 44% </h3>
+              <ul class="list-group box_colour2">
+                <li class="list-group-item box_colour2">
+                  <div style="float: left;">Best seling Product stock level</div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour2">
+                  <div style="float: left;">Out of stock</div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour2">
+                  <div style="float: left;"></div>
+                  <div style="float: right;"></div>
+                </li>
+                <li class="list-group-item box_colour2">
+                  <div style="float: left;"></div>
+                  <div style="float: right;"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4 mb-3  box_style box_colour3">
+              <h3>New product creation In 14 days <br><br> 5 </h3>
+              <ul class="list-group box_colour3">
+                <li class="list-group-item box_colour3">
+                  <div style="float: left;">Rejected products </div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour3">
+                  <div style="float: left;">Approved products</div>
+                  <div style="float: right;">429</div>
+                </li>
+                <li class="list-group-item box_colour3">
+                  <div style="float: left;">Pending products</div>
+                  <div style="float: right;">O</div>
+                </li>
+                <li class="list-group-item box_colour3">
+                  <div style="float: left;"></div>
+                  <div style="float: right;"></div>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+        </div>
+      </div>
+     
+      <div id="uplode_product" class="tab-pane fade  ">
+        <!-- add producr -->
+        <form class=" ">
+
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="ProductTitle ">Product Title </label>
+              <input type="text" class="form-control" id="ProductTitle" placeholder="name" required>
+              <div class="invalid-feedback">
+                Product name cant have any number or special characters.
+              </div>
+              <div class="valid-feedback">
+                Correct format.
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="catagory">catagory</label>
+              <select class="form-control rounded" name="catagory">
+                <!-- select manufacturer Starts -->
+
+                <option>catagory </option>
+                <option>chocolat </option>
+                <option>hard candy </option>
+                <option>tofe </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group col-md-12">
+            <label for="Product Image " class="custom-file-label" id="imageFile">Product Image </label>
+            <input type="file" name="product_img"  id="product_img" class="custom-file-input rounded" required>
+            <div class="invalid-feedback">
+              Not a image File, Only image file Accepted.
+            </div>
+            <div class="valid-feedback">
+              file Accepted.
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="price">Price</label>
+              <input type="text" class="form-control" id="price" required>
+            </div>
+            <div class="form-group col-md-5">
+              <label for="brand">Brand</label>
+              <select id="brand" class="form-control">
+                <option selected>Choose...</option>
+                <option>catbary</option>
+                <option>KitKet</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="quentity">Quentity</label>
+              <input type="number" class="form-control" id="quentity" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description ">Description </label>
+            <textarea name="product_desc" class="form-control rounded" rows="3" id="product_desc" required></textarea>
+          </div>
+
+
+          <!-- <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div> -->
+          <button type="submit" class="btn btn-warning">Submit & ADD</button>
+        </form>
+      </div>
+        <!--end add producr -->
+        <div id="product" class="tab-pane fade ">
+        <!-- viewProduct -->
+        <table class="table table-striped  ">
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Product Title</th>
+              <th>Product Image</th>
+              <th>Product Price</th>
+              <th>Product Quantity</th>
+              <th>Product Date</th>
+              <th>Product Delete</th>
+              <th>Product Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Product ID 1</th>
+              <td>Product Title</td>
+              <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+              <td>tk 1000</td>
+              <td>2000</td>
+              <td>10/10/20</td>
+              <td>
+                <a href="#" class="text-warning">
+                  <i class="fa fa-trash-o"> </i> Delete
+                </a>
+              </td>
+              <td>
+                <a href="#" class="text-warning" data-toggle="modal" data-target="#updateProductForm">
+                  <i class="fa fa-pencil"> </i> Edit
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Product ID 1</th>
+              <td>Product Title</td>
+              <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+              <td>tk 1000</td>
+              <td>2000</td>
+              <td>10/10/20</td>
+              <td>
+                <a href="#" class="text-warning">
+                  <i class="fa fa-trash-o"> </i> Delete
+                </a>
+              </td>
+              <td>
+                <a href="#" class="text-warning" data-toggle="modal" data-target="#updateProductForm">
+                  <i class="fa fa-pencil"> </i> Edit
+                </a>
+              </td>
+            </tr>
+            </tr>
+            <tr>
+              <th scope="row">Product ID 1</th>
+              <td>Product Title</td>
+              <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+              <td>tk 1000</td>
+              <td>2000</td>
+              <td>10/10/20</td>
+              <td>
+                <a href="#" class="text-warning">
+                  <i class="fa fa-trash-o"> </i> Delete
+                </a>
+              </td>
+              <td>
+                <a href="#" class="text-warning" data-toggle="modal" data-target="#updateProductForm">
+                  <i class="fa fa-pencil"> </i> Edit
+                </a>
+              </td>
+            </tr>
+            </tr>
+          </tbody>
+        </table>
+        <!--end viewProduct -->
+        </div>
+
+        <div id="Product_catagory" class="tab-pane fade  ">
+          <!-- add producr catagory -->
+          <form class=" ">
+  
+  
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="ProductTitle ">Product Title </label>
+                <input type="text" class="form-control" id="Product Title " placeholder="name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="catagory">catagory</label>
+                <select class="form-control rounded" name="catagory">
+                  <!-- select manufacturer Starts -->
+  
+                  <option>catagory </option>
+                  <option>chocolat </option>
+                  <option>hard candy </option>
+                  <option>tofe </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="Product Image " class="custom-file-label">Product Image </label>
+              <input type="file" name="product_img" class="custom-file-input rounded" required>
+  
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price">
+              </div>
+              <div class="form-group col-md-5">
+                <label for="brand">Brand</label>
+                <select id="brand" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>catbary</option>
+                  <option>KitKet</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="quentity">Quentity</label>
+                <input type="text" class="form-control" id="quentity">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description ">Description </label>
+              <textarea name="product_desc" class="form-control rounded" rows="3" id="product_desc"></textarea>
+            </div>
+  
+  
+            <!-- <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div> -->
+            <button type="submit" class="btn btn-primary">Submit & ADD</button>
+          </form>
+        </div>
+          <!--end add producr catagory -->
+
+          <div id="Order_Detaile" class="tab-pane fade ">
+            <!-- Order Detaile -->
+            <table class="table table-striped  ">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Product Title</th>
+                  <th>Product Image</th>
+                  <th>Product Price</th>
+                  <th>Product Quantity</th>
+                  <th>Order Date</th>
+                  <th>Shipping Progreass</th>
+                  <th>Order By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Product ID 1</th>
+                  <td>Product Title</td>
+                  <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+                  <td>tk 1000</td>
+                  <td>2000</td>
+                  <td>10/10/20</td>
+                  <td>
+                    unknow
+                  </td>
+                  <td>
+                    <a href="#" class="text-warning">
+                      Md Rashed afridi
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Product ID 1</th>
+                  <td>Product Title</td>
+                  <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+                  <td>tk 1000</td>
+                  <td>2000</td>
+                  <td>10/10/20</td>
+                  <td>
+                    unknow
+                  </td>
+                  <td>
+                    <a href="#" class="text-warning">
+                      Md Rashed afridi
+                    </a>
+                  </td>
+                </tr>
+                </tr>
+                <tr>
+                  <th scope="row">Product ID 1</th>
+                  <td>Product Title</td>
+                  <td><img src="data/product-assorted-lollypops.jpg" width="60" height="60"></td>
+                  <td>tk 1000</td>
+                  <td>2000</td>
+                  <td>10/10/20</td>
+                  <td>
+                    unknow
+                  </td>
+                  <td>
+                    <a href="#" class="text-warning">
+                      Md Rashed afridi
+                    </a>
+                  </td>
+                </tr>
+                </tr>
+              </tbody>
+            </table>
+          
+            </div>
+       <!--end Order Detaile -->
+
+  </div>
+
+
+  <div class="footer mt-5">
+    <!--  footer -->
+    <footer class="container  ">
+      <div class="mx-5 pt-5 row text-white">
+        <div class="col-md-6">
+          <img src="data/logo.svg" width="" height="45" alt="Shop" sizes="" srcset="">
+          <p>-- Get high quality candy in affordable price</p>
+          <ul>
+            <li>Call Us: <a href="#" class="">+01963278613</a> </li>
+            <li>Email: <a href="#" class="">rashedafridi@gmail.com</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-4">
+              <h5 class="mb-0 mt-2">Explote</h5>
+              <ul class="">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Gift</a></li>
+                <li><a href="#">Special Deals</a></li>
+                <li><a href="#">brands</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="mb-0 mt-2">Search BY</h5>
+              <ul class="">
+                <li><a href="#">Color</a></li>
+                <li><a href="#">occasion</a></li>
+                <li><a href="#">Brand</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5 class="mb-0 mt-2">Registation</h5>
+              <ul class="">
+                <li><a href="#">Register</a> </li>
+                <li><a href="#">login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="copy-write text-center align-bottom ">2020 mit lisience All right reserve</p>
+    </footer>
+  </div>
+
+
+
+  <!-- Register toggle modal -->
+  <!-- <button type="button" class="btn btn-info mx-0 my-sm-0" data-toggle="modal" data-target="#updateProductForm">
+    Update Product
+        </button> -->
+
+  <!--Register Modal -->
+  <div class="login_modal modal fade" id="updateProductForm" tabindex="-1" role="dialog" aria-labelledby="updateProductFormLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="RegisterLabel">Update Product</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class=" ">
+
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="ProductTitle ">Product Title </label>
+                <input type="text" class="form-control" id="ProductTitle" placeholder="name" required>
+                <div class="invalid-feedback">
+                  Product name cant have any number or special characters.
+                </div>
+                <div class="valid-feedback">
+                  Correct format.
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="catagory">catagory</label>
+                <select class="form-control rounded" name="catagory">
+                  <!-- select manufacturer Starts -->
+  
+                  <option>catagory </option>
+                  <option>chocolat </option>
+                  <option>hard candy </option>
+                  <option>tofe </option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="Product Image " class="custom-file-label" id="imageFile">Product Image </label>
+              <input type="file" name="product_img"  id="product_img" class="custom-file-input rounded" required>
+              <div class="invalid-feedback">
+                Not a image File, Only image file Accepted.
+              </div>
+              <div class="valid-feedback">
+                file Accepted.
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" placeholder="1000" required>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="brand">Brand</label>
+                <select id="brand" class="form-control">
+                  <option >Choose...</option>
+                  <option selected>catbary</option>
+                  <option>KitKet</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="quentity">Quentity</label>
+                <input type="number" class="form-control" id="quentity" placeholder="1000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description ">Description </label>
+              <textarea name="product_desc" class="form-control rounded" rows="3" id="product_desc" required
+              placeholder=""
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officia a repellendus, ducimus tempora magnam minus laboriosam molestiae quam officiis minima, quis, laborum vitae eaque tempore nisi enim omnis libero.</textarea>
+            </div>
+  
+  
+            <!-- <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div> -->
+            <button type="submit" class="btn btn-warning">Update Product</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+
+          <!-- <button type="submit" class="btn btn-warning">registation</button>
+          <button type="button" class="btn btn-outline-warning mx-3 my-sm-0" data-dismiss="modal" data-toggle="modal"
+            data-target="#login">
+            login
+          </button> -->
+          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="scripts/admin.js"></script>
+  <script src="https://kit.fontawesome.com/7483615cee.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
